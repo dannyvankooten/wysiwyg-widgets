@@ -28,9 +28,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+defined('ABSPATH') or exit;
 
-define( 'WYWI_VERSION_NUMBER', "2.3.10" );
 define( 'WYWI_PLUGIN_DIR', __DIR__ . '/' );
 
 require_once __DIR__ . '/includes/plugin.php';

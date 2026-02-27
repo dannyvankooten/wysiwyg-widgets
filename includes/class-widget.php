@@ -34,7 +34,7 @@ class WYSIWYG_Widgets_Widget extends WP_Widget {
 			// Allow filtering of content
 			$content = apply_filters( 'ww_content', $post->post_content, $id );
 
-			printf( '<!-- Widget by WYSIWYG Widgets v%s - https://wordpress.org/plugins/wysiwyg-widgets/ -->', WYWI_VERSION_NUMBER );
+			echo '<!-- Widget Content Blocks - https://wordpress.org/plugins/wysiwyg-widgets/ -->';
 
 			if( $show_title ) {
 				// first check $instance['title'] so titles are not changed for people upgrading from an older version of the plugin
@@ -45,21 +45,19 @@ class WYSIWYG_Widgets_Widget extends WP_Widget {
 			}
 
 			echo $content;
-			echo '<!-- / WYSIWYG Widgets -->';
-
 		} elseif( current_user_can( 'manage_options' ) ) { ?>
 				<p>
 					<?php if( empty( $id ) ) {
 						_e( 'Please select a Widget Block to show in this area.', 'wysiwyg-widgets' );
-					} else { 
+					} else {
 						printf( __( 'No widget block found with ID %d, please select an existing Widget Block in the widget settings.', 'wysiwyg-widgets' ), $id );
 					} ?>
 				</p>
-		<?php 
+		<?php
 		}
 
 		echo $args['after_widget'];
-		
+
 	}
 
 	/**
@@ -88,7 +86,7 @@ class WYSIWYG_Widgets_Widget extends WP_Widget {
 	 * @return string|void
 	 */
 	public function form( $instance ) {
-		
+
 		$posts = (array) get_posts(array(
 			'post_type' => 'wysiwyg-widget',
 			'numberposts' => -1
@@ -99,11 +97,11 @@ class WYSIWYG_Widgets_Widget extends WP_Widget {
 		$title = ($selected_widget_id) ? get_the_title( $selected_widget_id ) : 'No widget block selected.';
 		?>
 
-		<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="hidden" value="<?php echo esc_attr( $title ); ?>" />
+		<input id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="hidden" value="<?php echo esc_attr( $title ); ?>" />
 
-		<p>	
-			<label for="<?php echo $this->get_field_id( 'wysiwyg-widget-id' ); ?>"><?php _e( 'Widget Block to show:', 'wysiwyg-widgets' ); ?></label> 
-			<select class="widefat" id="<?php echo $this->get_field_id('wysiwyg-widget-id'); ?>" name="<?php echo $this->get_field_name( 'wysiwyg-widget-id' ); ?>" required>
+		<p>
+			<label for="<?php echo esc_attr($this->get_field_id( 'wysiwyg-widget-id' )); ?>"><?php _e( 'Widget Block to show:', 'wysiwyg-widgets' ); ?></label>
+			<select class="widefat" id="<?php echo $this->get_field_id('wysiwyg-widget-id'); ?>" name="<?php echo esc_attr($this->get_field_name( 'wysiwyg-widget-id' )); ?>" required>
 				<option value="0" disabled <?php selected( $selected_widget_id, 0 ); ?>>
 					<?php if( empty( $posts ) ) {
 						_e( 'No widget blocks found', 'wysiwyg-widgets' );
@@ -112,13 +110,13 @@ class WYSIWYG_Widgets_Widget extends WP_Widget {
 					} ?>
 				</option>
 				<?php foreach( $posts as $p ) { ?>
-					<option value="<?php echo $p->ID; ?>" <?php selected( $selected_widget_id, $p->ID ); ?>><?php echo $p->post_title; ?></option>
+					<option value="<?php echo $p->ID; ?>" <?php selected( $selected_widget_id, $p->ID ); ?>><?php echo esc_html($p->post_title); ?></option>
 				<?php } ?>
 			</select>
 		</p>
 
 		<p>
-			<label><input type="checkbox" id="<?php echo $this->get_field_id( 'show_title' ); ?>" name="<?php echo $this->get_field_name( 'show_title' ); ?>" value="1" <?php checked( $show_title, 1 ); ?> /> <?php _e( "Show title?", "wysiwyg-widgets" ); ?></label>
+			<label><input type="checkbox" id="<?php echo esc_attr($this->get_field_id( 'show_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_title' )); ?>" value="1" <?php checked( $show_title, 1 ); ?> /> <?php _e( "Show title?", "wysiwyg-widgets" ); ?></label>
 		</p>
 
 		<p class="help"><?php printf( __( 'Manage your widget blocks %shere%s', 'wysiwyg-widgets' ), '<a href="'. admin_url( 'edit.php?post_type=wysiwyg-widget' ) .'">', '</a>' ); ?></p>

@@ -3,32 +3,14 @@
 class WYSIWYG_Widgets_Admin {
 
 	public function __construct() {
-		//add_action('init', array($this, 'add_caps') );
 		add_action( 'add_meta_boxes', array($this, 'add_meta_box'), 20 );
-	}
-
-	/**
-	 * Add Capability to edit widget block
-	 */
-	public function add_caps() {
-		$caps_version = '1.1';
-
-		// did we add the caps already?
-		$db_version = get_option( 'wywi_caps_version', 0 );
-		if( version_compare( $db_version, $caps_version, '>=' ) ) {
-			return;
-		}
-		
-		$role = get_role( 'administrator' );
-		$role->add_cap( 'edit_widget_block' );
-		//update_option('wywi_caps_version', $caps_version);
 	}
 
 	/**
 	 * Add meta box to "edit" screen
 	 */
 	public function add_meta_box() {
-		add_meta_box( 
+		add_meta_box(
             'wysiwyg-widget-donate-box',
 	        __( 'More..', 'wysiwyg-widgets' ),
 	        array( $this, 'meta_donate_box' ),
@@ -41,7 +23,7 @@ class WYSIWYG_Widgets_Admin {
 	/**
 	 * Render the meta box on the "edit screen"
 	 *
-	 * @param $post
+	 * @param \WP_Post $post
 	 */
 	public function meta_donate_box( $post ) {
 		?>
@@ -63,7 +45,6 @@ class WYSIWYG_Widgets_Admin {
 				<ul class="ul-square">
 					<li><a href="https://wordpress.org/plugins/mailchimp-for-wp/">Mailchimp for Wordpress</a></li>
                     <li><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a></li>
-                    <li><a href="https://wordpress.org/plugins/html-forms/">HTML Forms</a></li>
                     <li><a href="https://wordpress.org/plugins/boxzilla/">Boxzilla Pop-Ups</a></li>
 					<li><a href="https://wordpress.org/plugins/mailchimp-top-bar/">MailChimp Top Bar</a></li>
 				</ul>
