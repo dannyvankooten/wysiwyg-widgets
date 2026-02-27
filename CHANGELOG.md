@@ -1,5 +1,9 @@
 # Changelog
 
+= 2.3.11 - February 27, 2026 =
+
+Version bump - this plugin is still working fine!
+
 = 2.3.10 - Feb 5, 2024 =
 
 Version bump just to get rid of the "unmaintained" warning.
@@ -8,7 +12,7 @@ Version bump just to get rid of the "unmaintained" warning.
 
 Updated WordPress compatibility.
 
-= 2.3.8 - October 25, 2017 = 
+= 2.3.8 - October 25, 2017 =
 
 Misc. textual improvements.
 
@@ -38,7 +42,7 @@ Maintenance release. Mainly just removed some dead links from meta & getting rid
 * Added: Italian translations, thanks to [Tiziano D'Angelo](http://www.dangelos.it/)
 * Improved: Code loading
 * Improved: added empty index.php files to prevent directory listings
-* Improved: all default WordPress' post filters are now applied to the widget content as well. 
+* Improved: all default WordPress' post filters are now applied to the widget content as well.
 
 = 2.3.2 - November 8, 2013 =
 * Improved: When `show_title` is false, (empty) title tags will not be displayed.
@@ -75,7 +79,7 @@ Maintenance release. Mainly just removed some dead links from meta & getting rid
 
 = 2.2.1 =
 * Improved: small code improvements
-* Improved: changed menu position 
+* Improved: changed menu position
 
 = 2.2 =
 * Fixed: shortcodes were not processed in v2.1.
@@ -114,7 +118,7 @@ Maintenance release. Mainly just removed some dead links from meta & getting rid
 * Added compatibility with Dean's FCKEditor for Wordpress plugin
 * Improved JS
 
-**NOTE**: In this version some things were changed regarding the auto-paragraphing. This is now being handled by TinyMCE instead of WordPress, so when updating please run trough your widgets to correct this. :) 
+**NOTE**: In this version some things were changed regarding the auto-paragraphing. This is now being handled by TinyMCE instead of WordPress, so when updating please run trough your widgets to correct this. :)
 
 = 1.0.6 =
 * Added backwards compatibility for WP installs below version 3.2 Sorry for the quick push!
@@ -143,5 +147,5 @@ Maintenance release. Mainly just removed some dead links from meta & getting rid
 = 1.0.1 =
 * Bugfix: Fixed the default title, it's now an empty string. ('')
 
-= 1.0 = 
+= 1.0 =
 * Initial release
