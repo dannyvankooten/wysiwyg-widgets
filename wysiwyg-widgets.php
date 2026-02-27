@@ -3,7 +3,7 @@
 Plugin Name: Widget Content Blocks
 Plugin URI: https://dannyvankooten.com/wordpress-plugins/wysiwyg-widgets/
 Description: Adds a WYSIWYG Widget with a rich text editor and media upload functions.
-Version: 2.3.10
+Version: 2.3.11
 Author: Danny van Kooten
 Author URI: http://dvk.co/
 Text Domain: wysiwyg-widgets
