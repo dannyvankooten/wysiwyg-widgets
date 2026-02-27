@@ -1,13 +1,13 @@
 === Widget Content Blocks ===
 Contributors: DvanKooten, Ibericode, hchouhan, lapzor
 Donate link: https://dannyvankooten.com/donate/
-Tags: widget,visual editor,image widget,visual,tinymce,fckeditor,widgets,rich text,wysiwyg,html
+Tags: widget, widgets, visual editor, wysiwyg, rich text
 Requires at least: 4.1
 Tested up to: 6.9
 Stable tag: 2.3.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires PHP: 5.2.14
+Requires PHP: 7.4
 
 Edit widget content using the default WordPress visual editor and media uploading functionality. Create widgets like you would create posts or pages.
 

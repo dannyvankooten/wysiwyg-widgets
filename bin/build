@@ -26,6 +26,13 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1
 fi
 
+# First, run some checks
+if [ ! -e "vendor/bin/phpstan"]; then
+    composer install
+fi;
+composer run check-syntax
+composer run static-analysis
+
 # Update version numbers in code
 sed -i "s/^Version: .*$/Version: $VERSION/g" "$PLUGIN_FILE"
 sed -i "s/define('\(.*_VERSION\)', '.*');/define('\1', '$VERSION');/g" "$PLUGIN_FILE"
