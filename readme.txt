@@ -3,7 +3,7 @@ Contributors: DvanKooten, Ibericode, hchouhan, lapzor
 Donate link: https://dannyvankooten.com/donate/
 Tags: widget,visual editor,image widget,visual,tinymce,fckeditor,widgets,rich text,wysiwyg,html
 Requires at least: 4.1
-Tested up to: 6.4
+Tested up to: 6.9
 Stable tag: 2.3.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Edit widget content using the default WordPress visual editor and media uploadin
 
 = WYSIWYG Widgets or rich text widgets =
 
-This plugin adds so called "Widget Blocks" to your website which you can easily display in your widget areas. 
+This plugin adds so called "Widget Blocks" to your website which you can easily display in your widget areas.
 
 You can create or edit the widget blocks just like you would edit any post or page, with all the default WordPress editing functions enabled. This way, you can use the visual editor that comes with WordPress to format your widgets. You can even use media uploading to insert images and so forth.
 
