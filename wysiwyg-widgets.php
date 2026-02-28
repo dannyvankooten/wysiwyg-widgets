@@ -32,10 +32,10 @@ defined('ABSPATH') or exit;
 
 define( 'WYWI_PLUGIN_DIR', __DIR__ . '/' );
 
-require_once __DIR__ . '/includes/plugin.php';
+require __DIR__ . '/includes/plugin.php';
 
 // only load admin class for non-ajax requests to the admin section
 if( is_admin() && ! wp_doing_ajax() ) {
-	require_once __DIR__ . '/includes/class-admin.php';
+	require __DIR__ . '/includes/class-admin.php';
 	new WYSIWYG_Widgets_Admin();
 }

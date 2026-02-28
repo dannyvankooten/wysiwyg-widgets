@@ -15,7 +15,7 @@ add_action('plugins_loaded', 'wywi_load_textdomain');
  * Register the Widget class
  */
 function wywi_register_widget() {
-	require_once WYWI_PLUGIN_DIR . 'includes/class-widget.php';
+	require WYWI_PLUGIN_DIR . 'includes/class-widget.php';
 	register_widget('WYSIWYG_Widgets_Widget');
 }
 
