@@ -1,4 +1,7 @@
 <?php
+
+defined('ABSPATH') or exit;
+
 /**
  * Load the plugin textdomain
  */
@@ -12,8 +15,8 @@ add_action('plugins_loaded', 'wywi_load_textdomain');
  * Register the Widget class
  */
 function wywi_register_widget() {
-	require_once WYWI_PLUGIN_DIR . 'includes/class-widget.php'; 
-	register_widget('WYSIWYG_Widgets_Widget');  
+	require_once WYWI_PLUGIN_DIR . 'includes/class-widget.php';
+	register_widget('WYSIWYG_Widgets_Widget');
 }
 
 add_action( 'widgets_init', 'wywi_register_widget');
@@ -33,7 +36,7 @@ function wywi_register_post_type()	{
 	    'view_item' => __('View Widget Block', 'wysiwyg-widgets'),
 	    'search_items' => __('Search Widget Blocks', 'wysiwyg-widgets'),
 	    'not_found' =>  __('No widget blocks found', 'wysiwyg-widgets'),
-	    'not_found_in_trash' => __('No widget blocks found in Trash', 'wysiwyg-widgets'), 
+	    'not_found_in_trash' => __('No widget blocks found in Trash', 'wysiwyg-widgets'),
 	    'menu_name' => __('Widget Blocks', 'wysiwyg-widgets')
 	  );
 	$args = array(
