@@ -3,7 +3,7 @@ Contributors: DvanKooten, Ibericode, hchouhan, lapzor
 Donate link: https://dannyvankooten.com/donate/
 Tags: widget, widgets, visual editor, wysiwyg, rich text
 Requires at least: 4.1
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 2.3.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
