@@ -31,20 +31,19 @@ class WYSIWYG_Widgets_Admin
     {
         ?>
             <div>
-                <h4><?php _e('How do I use this?', 'wysiwyg-widgets'); ?></h4>
-                <p><?php printf(__('Show this widget block by going to your %swidgets page%s and then dragging the <strong>WYSIWYG Widget</strong> to one of your widget areas.', 'wysiwyg-widgets'), '<a href="' . admin_url('widgets.php') . '">', '</a>'); ?></p>
+                <h4><?php esc_html_e('How do I use this?', 'wysiwyg-widgets'); ?></h4>
+                <p><?php printf(wp_kses(__('Show this widget block by going to your %1$swidgets page%2$s and then dragging the <strong>WYSIWYG Widget</strong> to one of your widget areas.', 'wysiwyg-widgets'), ['strong' => []]), '<a href="' . esc_url(admin_url('widgets.php')) . '">', '</a>'); ?></p>
             </div>
 
             <div style="margin-top: 30px;">
-                <h4><?php _e('Help promote this plugin', 'wysiwyg-widgets'); ?></h4>
+                <h4><?php esc_html_e('Help promote this plugin', 'wysiwyg-widgets'); ?></h4>
                 <ul class="ul-square">
-                    <li><a href="https://wordpress.org/support/view/plugin-reviews/wysiwyg-widgets?rate=5#postform" target="_blank"><?php _e('Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org', 'wysiwyg-widgets'); ?></a></li>
-                    <li><a href="https://wordpress.org/plugins/wysiwyg-widgets/#compatibility"><?php _e('Vote "works" on the WordPress.org plugin page', 'wysiwyg-widgets'); ?></a></li>
+                    <li><a href="https://wordpress.org/support/view/plugin-reviews/wysiwyg-widgets?rate=5#postform" target="_blank"><?php esc_html_e('Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org', 'wysiwyg-widgets'); ?></a></li>
                 </ul>
             </div>
 
             <div style="margin-top: 30px;">
-                <h4><?php _e('Our other plugins', 'wysiwyg-widgets'); ?></h4>
+                <h4><?php esc_html_e('Our other plugins', 'wysiwyg-widgets'); ?></h4>
                 <ul class="ul-square">
                     <li><a href="https://wordpress.org/plugins/mailchimp-for-wp/">Mailchimp for Wordpress</a></li>
                     <li><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a></li>

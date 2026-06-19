@@ -29,6 +29,7 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
         $show_title = (isset($instance['show_title'])) ? $instance['show_title'] : 1;
         $post = get_post($id);
 
+        // phpcs:ignore WordPress.Security.EscapeOutput
         echo $args['before_widget'];
 
         if (! empty($id) && $post) {
@@ -42,21 +43,24 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
                 // titles WILL change when they re-save their widget..
                 $title = ( isset($instance['title']) ) ? $instance['title'] : $post->post_title;
                 $title = apply_filters('widget_title', $title);
-                echo $args['before_title'] . $title . $args['after_title'];
+
+                // phpcs:ignore WordPress.Security.EscapeOutput
+                echo $args['before_title'] . esc_html($title) . $args['after_title'];
             }
 
-            echo $content;
+            echo wp_kses_post($content);
         } elseif (current_user_can('manage_options')) { ?>
                 <p>
                     <?php if (empty($id)) {
-                        _e('Please select a Widget Block to show in this area.', 'wysiwyg-widgets');
+                        esc_html_e('Please select a Widget Block to show in this area.', 'wysiwyg-widgets');
                     } else {
-                        printf(__('No widget block found with ID %d, please select an existing Widget Block in the widget settings.', 'wysiwyg-widgets'), $id);
+                        printf(esc_html__('No widget block found with ID %d, please select an existing Widget Block in the widget settings.', 'wysiwyg-widgets'), (int) $id);
                     } ?>
                 </p>
             <?php
         }
 
+        // phpcs:ignore WordPress.Security.EscapeOutput
         echo $args['after_widget'];
     }
 
@@ -102,26 +106,26 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
         <input id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="hidden" value="<?php echo esc_attr($title); ?>" />
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('wysiwyg-widget-id')); ?>"><?php _e('Widget Block to show:', 'wysiwyg-widgets'); ?></label>
-            <select class="widefat" id="<?php echo $this->get_field_id('wysiwyg-widget-id'); ?>" name="<?php echo esc_attr($this->get_field_name('wysiwyg-widget-id')); ?>" required>
+            <label for="<?php echo esc_attr($this->get_field_id('wysiwyg-widget-id')); ?>"><?php esc_html_e('Widget Block to show:', 'wysiwyg-widgets'); ?></label>
+            <select class="widefat" id="<?php echo esc_attr($this->get_field_id('wysiwyg-widget-id')); ?>" name="<?php echo esc_attr($this->get_field_name('wysiwyg-widget-id')); ?>" required>
                 <option value="0" disabled <?php selected($selected_widget_id, 0); ?>>
                     <?php if (empty($posts)) {
-                        _e('No widget blocks found', 'wysiwyg-widgets');
+                        esc_html_e('No widget blocks found', 'wysiwyg-widgets');
                     } else {
-                        _e('Select a widget block', 'wysiwyg-widgets');
+                        esc_html_e('Select a widget block', 'wysiwyg-widgets');
                     } ?>
                 </option>
                 <?php foreach ($posts as $p) { ?>
-                    <option value="<?php echo $p->ID; ?>" <?php selected($selected_widget_id, $p->ID); ?>><?php echo esc_html($p->post_title); ?></option>
+                    <option value="<?php echo (int) $p->ID; ?>" <?php selected($selected_widget_id, $p->ID); ?>><?php echo esc_html($p->post_title); ?></option>
                 <?php } ?>
             </select>
         </p>
 
         <p>
-            <label><input type="checkbox" id="<?php echo esc_attr($this->get_field_id('show_title')); ?>" name="<?php echo esc_attr($this->get_field_name('show_title')); ?>" value="1" <?php checked($show_title, 1); ?> /> <?php _e("Show title?", "wysiwyg-widgets"); ?></label>
+            <label><input type="checkbox" id="<?php echo esc_attr($this->get_field_id('show_title')); ?>" name="<?php echo esc_attr($this->get_field_name('show_title')); ?>" value="1" <?php checked($show_title, 1); ?> /> <?php esc_html_e("Show title?", "wysiwyg-widgets"); ?></label>
         </p>
 
-        <p class="help"><?php printf(__('Manage your widget blocks %shere%s', 'wysiwyg-widgets'), '<a href="' . admin_url('edit.php?post_type=wysiwyg-widget') . '">', '</a>'); ?></p>
+        <p class="help"><?php printf(esc_html__('Manage your widget blocks %1$shere%2$s', 'wysiwyg-widgets'), '<a href="' . esc_url(admin_url('edit.php?post_type=wysiwyg-widget')) . '">', '</a>'); ?></p>
         <?php
     }
 }

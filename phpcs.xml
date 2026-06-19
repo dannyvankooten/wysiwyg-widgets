@@ -8,7 +8,7 @@
     <arg value="ns"/>
 
     <config name="testVersion" value="7.4-"/>
-	<config name="minimum_wp_version" value="6.2" />
+	<config name="minimum_wp_version" value="4.1" />
 
 	<file>.</file>
     <exclude-pattern>vendor/</exclude-pattern>
@@ -60,9 +60,8 @@
 		<exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps" />
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace" />
 	</rule>
-	<!-- WordPress sniffs -->
-     <!-- 
 
+	<!-- WordPress sniffs -->
 	<rule ref="WordPress.Security">
 		<exclude name="WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"/>
         <exclude-pattern>code-snippets/</exclude-pattern>
@@ -71,10 +70,10 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 		<property name="text_domain" type="array">
-			<element value="koko-analytics" />
+			<element value="wysiwyg-widgets" />
 		</property>
 		</properties>
 	</rule>
-	<rule ref="WordPress.NamingConventions"/> -->
+	<rule ref="WordPress.NamingConventions"/>
 
 </ruleset>
