@@ -31,24 +31,36 @@ class WYSIWYG_Widgets_Admin
     {
         ?>
             <div>
-                <h4><?php esc_html_e('How do I use this?', 'wysiwyg-widgets'); ?></h4>
-                <p><?php printf(wp_kses(__('Show this widget block by going to your %1$swidgets page%2$s and then dragging the <strong>WYSIWYG Widget</strong> to one of your widget areas.', 'wysiwyg-widgets'), ['strong' => []]), '<a href="' . esc_url(admin_url('widgets.php')) . '">', '</a>'); ?></p>
+                <h3 style="margin-bottom:8px"><?php esc_html_e('How do I use this?', 'wysiwyg-widgets'); ?></h3>
+                <p><?php printf(wp_kses(__('Show this widget block by going to your %1$swidgets page%2$s and then adding the <strong>Widget Blocks Widget</strong> to one of your widget areas.', 'wysiwyg-widgets'), ['strong' => []]), '<a href="' . esc_url(admin_url('widgets.php')) . '">', '</a>'); ?></p>
             </div>
 
-            <div style="margin-top: 30px;">
-                <h4><?php esc_html_e('Help promote this plugin', 'wysiwyg-widgets'); ?></h4>
+            <div style="margin-top: 36px;">
+                <h3 style="margin-bottom:8px"><?php esc_html_e('Help promote this plugin', 'wysiwyg-widgets'); ?></h3>
                 <ul class="ul-square">
-                    <li><a href="https://wordpress.org/support/view/plugin-reviews/wysiwyg-widgets?rate=5#postform" target="_blank"><?php esc_html_e('Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org', 'wysiwyg-widgets'); ?></a></li>
+                    <li><a href="https://wordpress.org/support/plugin/wysiwyg-widgets/reviews/#new-post" target="_blank"><?php esc_html_e('Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org', 'wysiwyg-widgets'); ?></a></li>
                 </ul>
             </div>
 
-            <div style="margin-top: 30px;">
-                <h4><?php esc_html_e('Our other plugins', 'wysiwyg-widgets'); ?></h4>
+            <div style="margin-top: 36px;">
+                <h3 style="margin-bottom:8px"><?php esc_html_e('Other plugins by ibericode', 'wysiwyg-widgets'); ?></h3>
                 <ul class="ul-square">
-                    <li><a href="https://wordpress.org/plugins/mailchimp-for-wp/">Mailchimp for Wordpress</a></li>
-                    <li><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a></li>
-                    <li><a href="https://wordpress.org/plugins/boxzilla/">Boxzilla Pop-Ups</a></li>
-                    <li><a href="https://wordpress.org/plugins/mailchimp-top-bar/">MailChimp Top Bar</a></li>
+                    <li>
+                        <strong><a href="https://wordpress.org/plugins/mailchimp-for-wp/">Mailchimp for Wordpress</a></strong><br>
+                        Sign-up methods for your Mailchimp newsletter audience.                      
+                    </li>
+                    <li>
+                        <strong><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a></strong><br>
+                        Privacy-friendly and self-hosted analytics for WordPress sites.
+                    </li>
+                    <li>
+                        <strong><a href="https://wordpress.org/plugins/boxzilla/">Boxzilla Pop-Ups</a></strong><br>
+                        Easy and flexible pop-ups to show at just the right time.
+                    </li>
+                    <li>
+                        <strong><a href="https://wordpress.org/plugins/mailchimp-top-bar/">Mailchimp Top Bar</a></strong><br>
+                        Capture more leads with an unobtrusive Mailchimp notification bar.
+                    </li>
                 </ul>
             </div>
 

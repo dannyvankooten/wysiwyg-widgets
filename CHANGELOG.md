@@ -1,5 +1,14 @@
 # Changelog
 
+= 2.3.12 - June 19, 2026 =
+
+* Added: Revision history support for Widget Blocks.
+* Improved: Escaping and sanitization of widget output and admin text.
+* Improved: Updated plugin copy, links, tags, PHP requirement, and WordPress compatibility information.
+* Improved: Added PHP syntax checks, PHPStan, PHPCS, WordPress coding standards, and GitHub Actions workflows.
+* Improved: The release build now runs checks first and excludes development files from the package.
+
+
 = 2.3.11 - February 27, 2026 =
 
 Version bump - this plugin is still working fine!

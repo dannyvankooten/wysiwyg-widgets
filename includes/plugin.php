@@ -46,7 +46,7 @@ function wywi_register_post_type()
         'public' => false,
         'show_ui' => true,
         'labels' => $labels,
-        'supports' => ['title', 'editor']
+        'supports' => ['title', 'editor', 'revisions']
     ];
 
     register_post_type('wysiwyg-widget', $args);

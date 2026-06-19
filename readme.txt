@@ -1,6 +1,5 @@
 === Widget Content Blocks ===
 Contributors: DvanKooten, Ibericode, hchouhan, lapzor
-Donate link: https://dannyvankooten.com/donate/
 Tags: widget, widgets, visual editor, wysiwyg, rich text
 Requires at least: 4.1
 Tested up to: 7.0
@@ -23,24 +22,26 @@ You can create or edit the widget blocks just like you would edit any post or pa
 
 - Create beautiful widgets without having to write HTML code
 - Easily insert media into your widget content
-- Add headings, lists, blockquotes and other HTML elements to your widgets using the WordPress visual editor
+- Add headings, lists, blockquotes and other HTML elements to your widgets using the WordPress classic editor
 - Use WP Links dialog to easily link to any of your pages or posts from a widget
 - Use shortcodes inside your widgets
+- Have a revision history of your widget content
 - Translation ready
 
-**Translators**
+**Translations**
 
-- Dutch (nl_NL) - [Danny van Kooten](https://dannyvankooten.com/)
-- Spanish (es_ES) - [Maria Ramos - WebHostingHub](http://webhostinghub.com/)
-- Italian (it_IT) - [Tiziano D'Angelo - Studio D'Angelo](http://www.dangelos.it/)
-- German (de_DE) - [Christian Günther](http://atelier.tag-eins.de/)
+Is the plugin not translated into your language? You can [contribute your translations using the translation editor here on WordPress.org](https://translate.wordpress.org/projects/wp-plugins/wysiwyg-widgets/).
 
-If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into WYSIWYG Widgets. You can [download the latest PO file here](http://plugins.svn.wordpress.org/wysiwyg-widgets/trunk/languages/wysiwyg-widgets.po).
+**Source code**
 
-**More information**
+The source code of this plugin is available on GitHub: [ibericode/wysiwyg-widgets](https://github.com/ibericode/wysiwyg-widgets).
 
-- [WYSIWYG Widgets](https://dannyvankooten.com/wordpress-plugins/wysiwyg-widgets/)
-- Other [WordPress plugins](https://dannyvankooten.com/wordpress-plugins/) by the same author
+
+**About the plugin author**
+
+[Danny van Kooten](https://www.dannyvankooten.com/) has been building WordPress plugins since 2010, starting with WordPress 3.0.
+
+He is the founder of [ibericode](https://www.ibericode.com/), the small software company behind popular WordPress plugins including [Mailchimp for WordPress](https://wordpress.org/plugins/mailchimp-for-wp/) and [Koko Analytics](https://wordpress.org/plugins/koko-analytics/).
 
 
 == Installation ==
@@ -78,6 +79,14 @@ Yes.
 
 
 == Changelog ==
+
+= 2.3.12 - June 19, 2026 =
+
+* Added: Revision history support for Widget Blocks.
+* Improved: Escaping and sanitization of widget output and admin text.
+* Improved: Updated plugin copy, links, tags, PHP requirement, and WordPress compatibility information.
+* Improved: Added PHP syntax checks, PHPStan, PHPCS, WordPress coding standards, and GitHub Actions workflows.
+* Improved: The release build now runs checks first and excludes development files from the package.
 
 = 2.3.11 - February 27, 2026 =
 

@@ -92,7 +92,6 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
      */
     public function form($instance)
     {
-
         $posts = (array) get_posts([
             'post_type' => 'wysiwyg-widget',
             'numberposts' => -1

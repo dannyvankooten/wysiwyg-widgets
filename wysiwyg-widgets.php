@@ -6,7 +6,7 @@ Plugin URI: https://dannyvankooten.com/wordpress-plugins/wysiwyg-widgets/
 Description: Adds a WYSIWYG Widget with a rich text editor and media upload functions.
 Version: 2.3.11
 Author: Danny van Kooten
-Author URI: http://dvk.co/
+Author URI: https://www.dannyvankooten.com/
 Text Domain: wysiwyg-widgets
 Domain Path: /languages/
 License: GPL v3 or later
