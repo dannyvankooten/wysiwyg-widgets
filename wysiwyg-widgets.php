@@ -1,4 +1,5 @@
 <?php
+
 /*
 Plugin Name: Widget Content Blocks
 Plugin URI: https://dannyvankooten.com/wordpress-plugins/wysiwyg-widgets/
@@ -30,12 +31,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 defined('ABSPATH') or exit;
 
-define( 'WYWI_PLUGIN_DIR', __DIR__ . '/' );
+define('WYWI_PLUGIN_DIR', __DIR__ . '/');
 
 require __DIR__ . '/includes/plugin.php';
 
 // only load admin class for non-ajax requests to the admin section
-if( is_admin() && ! wp_doing_ajax() ) {
-	require __DIR__ . '/includes/class-admin.php';
-	new WYSIWYG_Widgets_Admin();
+if (is_admin() && ! wp_doing_ajax()) {
+    require __DIR__ . '/includes/class-admin.php';
+    new WYSIWYG_Widgets_Admin();
 }
