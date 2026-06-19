@@ -3,7 +3,7 @@ Contributors: DvanKooten, Ibericode, hchouhan, lapzor
 Tags: widget, widgets, visual editor, wysiwyg, rich text
 Requires at least: 4.1
 Tested up to: 7.0
-Stable tag: 2.3.11
+Stable tag: 2.3.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.4
@@ -87,6 +87,7 @@ Yes.
 * Improved: Updated plugin copy, links, tags, PHP requirement, and WordPress compatibility information.
 * Improved: Added PHP syntax checks, PHPStan, PHPCS, WordPress coding standards, and GitHub Actions workflows.
 * Improved: The release build now runs checks first and excludes development files from the package.
+
 
 = 2.3.11 - February 27, 2026 =
 
