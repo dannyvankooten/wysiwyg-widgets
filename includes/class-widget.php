@@ -33,8 +33,6 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
         echo $args['before_widget'];
 
         if (! empty($id) && $post) {
-            
-
             echo '<!-- Widget Content Blocks - https://wordpress.org/plugins/wysiwyg-widgets/ -->';
 
             if ($show_title) {
@@ -50,7 +48,7 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
             // Allow filtering of content
             $content = apply_filters('ww_content', $post->post_content, $id);
 
-            // phpcs:ignore WordPress.Security.EscapeOutput - HTML is filtered upon saving a post (depending on user capability)
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- HTML is filtered upon saving a post (depending on user capability)
             echo $content;
         } elseif (current_user_can('manage_options')) { ?>
                 <p>
