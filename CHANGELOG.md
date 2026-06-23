@@ -1,5 +1,10 @@
 # Changelog
 
+= 2.3.13 - June 23, 2026 =
+
+* Fix: Some HTML elements being escaped despite user having unfiltered_html capability.
+
+
 = 2.3.12 - June 19, 2026 =
 
 * Added: Revision history support for Widget Blocks.

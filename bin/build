@@ -31,6 +31,7 @@ if [ ! -e "vendor/bin/phpstan" ]; then
     composer install
 fi;
 composer run check-syntax
+composer run check-codestyle
 composer run static-analysis
 
 # Update version numbers in code
