@@ -48,7 +48,8 @@ class WYSIWYG_Widgets_Widget extends WP_Widget
                 echo $args['before_title'] . esc_html($title) . $args['after_title'];
             }
 
-            echo wp_kses_post($content);
+            // phpcs:ignore WordPress.Security.EscapeOutput -- users with unfiltered_html capability can use any HTML in their widget block content
+            echo current_user_can('unfiltered_html') ? $content : wp_kses_post($content);
         } elseif (current_user_can('manage_options')) { ?>
                 <p>
                     <?php if (empty($id)) {
